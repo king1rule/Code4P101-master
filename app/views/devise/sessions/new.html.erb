@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col m6 offset-m3 center">
+
+    <h5>Log In</h5>
+    
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= render partial: "shared/devisemes" %>
+
+      <div class="input-field">
+        <%= f.email_field :email, :id => "email", :class => "validate", :placeholder => "Email" %>
+      </div>
+
+      <div class="input-field">
+        <%= f.password_field :password, :id => "email", :class => "validate", :placeholder => "Password", autocomplete: "off" %>
+      </div>
+
+      <button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+      <%= link_to "Forgot password", new_user_password_path, :class => "btn waves-effect waves-light" %>
+    <% end %>
+
+  </div>
+</div>
