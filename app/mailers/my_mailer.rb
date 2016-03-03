@@ -18,7 +18,7 @@ class MyMailer < ActionMailer::Base
 			]
 		}
 
-		mandrill_client.messages.send_template template_name, template_content, message
+		#mandrill_client.messages.send_template template_name, template_content, message
 	end
 
 end
