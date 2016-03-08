@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         :omniauthable
+        devise :omniauthable, :omniauth_providers => [:google_oauth2]
 
   validates :name, presence: true, length: {maximum: 25}
 
@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
           provider: access_token.provider,
           email: data["email"],
           uid: access_token.uid,
+          image: data["image"],
           password: Devise.friendly_token[0,20]
           )
             end

@@ -40,6 +40,7 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bson (4.0.3)
     builder (3.2.2)
     byebug (8.2.2)
     coffee-rails (4.1.1)
@@ -88,6 +89,13 @@ GEM
     mime-types (2.99.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    mongo (2.2.4)
+      bson (~> 4.0)
+    mongoid (5.1.1)
+      activemodel (~> 4.0)
+      mongo (~> 2.1)
+      origin (~> 2.2)
+      tzinfo (>= 0.3.37)
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -110,6 +118,7 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
+    origin (2.2.0)
     orm_adapter (0.5.0)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -193,6 +202,7 @@ DEPENDENCIES
   jquery-rails
   mandrill-api (= 1.0.52)
   materialize-sass
+  mongoid (~> 5.1.0)
   omniauth
   omniauth-google-oauth2
   rails (= 4.2.0)
